@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>{{ 'home.welcome.title'|trans({'%name%': app.user }) }}</h1>
+            <p>Proximo - Sistema de Gerenciamento de Atendimento</p>
+            <p>
+                <a class="btn btn-outline-dark btn-lg" href="https://proximo.digital/" role="button"  target="_blank">
+                    {{ 'home.welcome.button.read'|trans }} &raquo;
+                </a>
+                
+            </p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        body>section {
+            padding: 20px 0;
+        }
+    </style>
+{% endblock %}
