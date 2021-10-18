@@ -5,7 +5,7 @@ modules/*
 ###> symfony/framework-bundle ###
 .env
 /public/bundles/
-
+/var/
 /vendor/
 ###< symfony/framework-bundle ###
 ###> symfony/web-server-bundle ###
