@@ -1,0 +1,153 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Prioridade',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Prioridade',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ORM\\PrioridadeRepository',
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'id' => true,
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'columnName' => 'id',
+                        ],
+                        'nome' => [
+                            'fieldName' => 'nome',
+                            'type' => 'string',
+                            'length' => 64,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'nome',
+                        ],
+                        'descricao' => [
+                            'fieldName' => 'descricao',
+                            'type' => 'string',
+                            'length' => 100,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'descricao',
+                        ],
+                        'peso' => [
+                            'fieldName' => 'peso',
+                            'type' => 'smallint',
+                            'precision' => 0,
+                            'scale' => 0,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'peso',
+                        ],
+                        'ativo' => [
+                            'fieldName' => 'ativo',
+                            'type' => 'boolean',
+                            'nullable' => false,
+                            'columnName' => 'ativo',
+                        ],
+                        'createdAt' => [
+                            'fieldName' => 'createdAt',
+                            'type' => 'datetime',
+                            'columnName' => 'created_at',
+                            'options' => [
+                                'default' => 'CURRENT_TIMESTAMP',
+                            ],
+                            'nullable' => false,
+                        ],
+                        'updatedAt' => [
+                            'fieldName' => 'updatedAt',
+                            'type' => 'datetime',
+                            'columnName' => 'updated_at',
+                            'nullable' => true,
+                        ],
+                        'deletedAt' => [
+                            'fieldName' => 'deletedAt',
+                            'type' => 'datetime',
+                            'columnName' => 'deleted_at',
+                            'nullable' => true,
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                        'nome' => 'nome',
+                        'descricao' => 'descricao',
+                        'peso' => 'peso',
+                        'ativo' => 'ativo',
+                        'created_at' => 'createdAt',
+                        'updated_at' => 'updatedAt',
+                        'deleted_at' => 'deletedAt',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                        'nome' => 'nome',
+                        'descricao' => 'descricao',
+                        'peso' => 'peso',
+                        'ativo' => 'ativo',
+                        'createdAt' => 'created_at',
+                        'updatedAt' => 'updated_at',
+                        'deletedAt' => 'deleted_at',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'prioridades',
+                    ],
+                ],
+                'entityListeners' => [
+                    [
+                        'prePersist' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\PrioridadeListener',
+                                'method' => 'prePersist',
+                            ],
+                        ],
+                        'preUpdate' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\PrioridadeListener',
+                                'method' => 'preUpdate',
+                            ],
+                        ],
+                        'preRemove' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\PrioridadeListener',
+                                'method' => 'preRemove',
+                            ],
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

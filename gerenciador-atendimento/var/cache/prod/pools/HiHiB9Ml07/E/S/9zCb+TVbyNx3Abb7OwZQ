@@ -1,0 +1,224 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Servico',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Servico',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ORM\\ServicoRepository',
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'id' => true,
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'columnName' => 'id',
+                        ],
+                        'nome' => [
+                            'fieldName' => 'nome',
+                            'type' => 'string',
+                            'length' => 50,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'nome',
+                        ],
+                        'descricao' => [
+                            'fieldName' => 'descricao',
+                            'type' => 'string',
+                            'length' => 100,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'descricao',
+                        ],
+                        'ativo' => [
+                            'fieldName' => 'ativo',
+                            'type' => 'boolean',
+                            'nullable' => false,
+                            'columnName' => 'ativo',
+                        ],
+                        'peso' => [
+                            'fieldName' => 'peso',
+                            'type' => 'smallint',
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'peso',
+                        ],
+                        'createdAt' => [
+                            'fieldName' => 'createdAt',
+                            'type' => 'datetime',
+                            'columnName' => 'created_at',
+                            'options' => [
+                                'default' => 'CURRENT_TIMESTAMP',
+                            ],
+                            'nullable' => false,
+                        ],
+                        'updatedAt' => [
+                            'fieldName' => 'updatedAt',
+                            'type' => 'datetime',
+                            'columnName' => 'updated_at',
+                            'nullable' => true,
+                        ],
+                        'deletedAt' => [
+                            'fieldName' => 'deletedAt',
+                            'type' => 'datetime',
+                            'columnName' => 'deleted_at',
+                            'nullable' => true,
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                        'nome' => 'nome',
+                        'descricao' => 'descricao',
+                        'ativo' => 'ativo',
+                        'peso' => 'peso',
+                        'created_at' => 'createdAt',
+                        'updated_at' => 'updatedAt',
+                        'deleted_at' => 'deletedAt',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                        'nome' => 'nome',
+                        'descricao' => 'descricao',
+                        'ativo' => 'ativo',
+                        'peso' => 'peso',
+                        'createdAt' => 'created_at',
+                        'updatedAt' => 'updated_at',
+                        'deletedAt' => 'deleted_at',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'servicos',
+                    ],
+                ],
+                'entityListeners' => [
+                    [
+                        'prePersist' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\ServicoListener',
+                                'method' => 'prePersist',
+                            ],
+                        ],
+                        'preUpdate' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\ServicoListener',
+                                'method' => 'preUpdate',
+                            ],
+                        ],
+                        'preRemove' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\ServicoListener',
+                                'method' => 'preRemove',
+                            ],
+                        ],
+                    ],
+                ],
+                'associationMappings' => [
+                    [
+                        'subServicos' => [
+                            'fieldName' => 'subServicos',
+                            'targetEntity' => 'Novosga\\Entity\\Servico',
+                            'mappedBy' => 'mestre',
+                            'fetch' => 2,
+                            'orphanRemoval' => false,
+                            'orderBy' => [
+                                'nome' => 'ASC',
+                            ],
+                            'type' => 4,
+                            'inversedBy' => null,
+                            'isOwningSide' => false,
+                            'sourceEntity' => 'Novosga\\Entity\\Servico',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                        ],
+                        'servicosUnidade' => [
+                            'fieldName' => 'servicosUnidade',
+                            'targetEntity' => 'Novosga\\Entity\\ServicoUnidade',
+                            'mappedBy' => 'servico',
+                            'fetch' => 2,
+                            'orphanRemoval' => false,
+                            'type' => 4,
+                            'inversedBy' => null,
+                            'isOwningSide' => false,
+                            'sourceEntity' => 'Novosga\\Entity\\Servico',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                        ],
+                        'mestre' => [
+                            'fieldName' => 'mestre',
+                            'targetEntity' => 'Novosga\\Entity\\Servico',
+                            'inversedBy' => 'subServicos',
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'macro_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\Servico',
+                            'fetch' => 2,
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'macro_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'macro_id' => 'macro_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'macro_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

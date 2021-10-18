@@ -1,0 +1,128 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Departamento',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Departamento',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ORM\\DepartamentoRepository',
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'id' => true,
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'columnName' => 'id',
+                        ],
+                        'nome' => [
+                            'fieldName' => 'nome',
+                            'type' => 'string',
+                            'length' => 64,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'nome',
+                        ],
+                        'descricao' => [
+                            'fieldName' => 'descricao',
+                            'type' => 'string',
+                            'length' => 250,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'descricao',
+                        ],
+                        'ativo' => [
+                            'fieldName' => 'ativo',
+                            'type' => 'boolean',
+                            'nullable' => false,
+                            'columnName' => 'ativo',
+                        ],
+                        'createdAt' => [
+                            'fieldName' => 'createdAt',
+                            'type' => 'datetime',
+                            'columnName' => 'created_at',
+                            'options' => [
+                                'default' => 'CURRENT_TIMESTAMP',
+                            ],
+                            'nullable' => false,
+                        ],
+                        'updatedAt' => [
+                            'fieldName' => 'updatedAt',
+                            'type' => 'datetime',
+                            'columnName' => 'updated_at',
+                            'nullable' => true,
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                        'nome' => 'nome',
+                        'descricao' => 'descricao',
+                        'ativo' => 'ativo',
+                        'created_at' => 'createdAt',
+                        'updated_at' => 'updatedAt',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                        'nome' => 'nome',
+                        'descricao' => 'descricao',
+                        'ativo' => 'ativo',
+                        'createdAt' => 'created_at',
+                        'updatedAt' => 'updated_at',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'departamentos',
+                    ],
+                ],
+                'entityListeners' => [
+                    [
+                        'prePersist' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\DepartamentoListener',
+                                'method' => 'prePersist',
+                            ],
+                        ],
+                        'preUpdate' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\DepartamentoListener',
+                                'method' => 'preUpdate',
+                            ],
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

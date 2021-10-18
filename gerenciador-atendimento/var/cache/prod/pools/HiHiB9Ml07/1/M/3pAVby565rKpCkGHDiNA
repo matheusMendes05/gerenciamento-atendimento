@@ -1,0 +1,231 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Unidade',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Unidade',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ORM\\UnidadeRepository',
+                ],
+                'embeddedClasses' => [
+                    [
+                        'impressao' => [
+                            'class' => 'Novosga\\Entity\\ConfiguracaoImpressao',
+                            'columnPrefix' => null,
+                            'declaredField' => null,
+                            'originalField' => null,
+                        ],
+                    ],
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'id' => true,
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'columnName' => 'id',
+                        ],
+                        'nome' => [
+                            'fieldName' => 'nome',
+                            'type' => 'string',
+                            'length' => 50,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'nome',
+                        ],
+                        'descricao' => [
+                            'fieldName' => 'descricao',
+                            'type' => 'string',
+                            'length' => 250,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'descricao',
+                        ],
+                        'ativo' => [
+                            'fieldName' => 'ativo',
+                            'type' => 'boolean',
+                            'nullable' => false,
+                            'columnName' => 'ativo',
+                        ],
+                        'createdAt' => [
+                            'fieldName' => 'createdAt',
+                            'type' => 'datetime',
+                            'columnName' => 'created_at',
+                            'options' => [
+                                'default' => 'CURRENT_TIMESTAMP',
+                            ],
+                            'nullable' => false,
+                        ],
+                        'updatedAt' => [
+                            'fieldName' => 'updatedAt',
+                            'type' => 'datetime',
+                            'columnName' => 'updated_at',
+                            'nullable' => true,
+                        ],
+                        'deletedAt' => [
+                            'fieldName' => 'deletedAt',
+                            'type' => 'datetime',
+                            'columnName' => 'deleted_at',
+                            'nullable' => true,
+                        ],
+                        'impressao.cabecalho' => [
+                            'fieldName' => 'impressao.cabecalho',
+                            'type' => 'string',
+                            'length' => 150,
+                            'nullable' => false,
+                            'columnName' => 'impressao_cabecalho',
+                            'originalClass' => 'Novosga\\Entity\\ConfiguracaoImpressao',
+                            'declaredField' => 'impressao',
+                            'originalField' => 'cabecalho',
+                        ],
+                        'impressao.rodape' => [
+                            'fieldName' => 'impressao.rodape',
+                            'type' => 'string',
+                            'length' => 150,
+                            'nullable' => false,
+                            'columnName' => 'impressao_rodape',
+                            'originalClass' => 'Novosga\\Entity\\ConfiguracaoImpressao',
+                            'declaredField' => 'impressao',
+                            'originalField' => 'rodape',
+                        ],
+                        'impressao.exibirData' => [
+                            'fieldName' => 'impressao.exibirData',
+                            'type' => 'boolean',
+                            'columnName' => 'impressao_exibir_data',
+                            'nullable' => false,
+                            'originalClass' => 'Novosga\\Entity\\ConfiguracaoImpressao',
+                            'declaredField' => 'impressao',
+                            'originalField' => 'exibirData',
+                        ],
+                        'impressao.exibirPrioridade' => [
+                            'fieldName' => 'impressao.exibirPrioridade',
+                            'type' => 'boolean',
+                            'columnName' => 'impressao_exibir_prioridade',
+                            'nullable' => false,
+                            'originalClass' => 'Novosga\\Entity\\ConfiguracaoImpressao',
+                            'declaredField' => 'impressao',
+                            'originalField' => 'exibirPrioridade',
+                        ],
+                        'impressao.exibirNomeUnidade' => [
+                            'fieldName' => 'impressao.exibirNomeUnidade',
+                            'type' => 'boolean',
+                            'columnName' => 'impressao_exibir_nome_unidade',
+                            'nullable' => false,
+                            'originalClass' => 'Novosga\\Entity\\ConfiguracaoImpressao',
+                            'declaredField' => 'impressao',
+                            'originalField' => 'exibirNomeUnidade',
+                        ],
+                        'impressao.exibirNomeServico' => [
+                            'fieldName' => 'impressao.exibirNomeServico',
+                            'type' => 'boolean',
+                            'columnName' => 'impressao_exibir_nome_servico',
+                            'nullable' => false,
+                            'originalClass' => 'Novosga\\Entity\\ConfiguracaoImpressao',
+                            'declaredField' => 'impressao',
+                            'originalField' => 'exibirNomeServico',
+                        ],
+                        'impressao.exibirMensagemServico' => [
+                            'fieldName' => 'impressao.exibirMensagemServico',
+                            'type' => 'boolean',
+                            'columnName' => 'impressao_exibir_mensagem_servico',
+                            'nullable' => false,
+                            'originalClass' => 'Novosga\\Entity\\ConfiguracaoImpressao',
+                            'declaredField' => 'impressao',
+                            'originalField' => 'exibirMensagemServico',
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                        'nome' => 'nome',
+                        'descricao' => 'descricao',
+                        'ativo' => 'ativo',
+                        'created_at' => 'createdAt',
+                        'updated_at' => 'updatedAt',
+                        'deleted_at' => 'deletedAt',
+                        'impressao_cabecalho' => 'impressao.cabecalho',
+                        'impressao_rodape' => 'impressao.rodape',
+                        'impressao_exibir_data' => 'impressao.exibirData',
+                        'impressao_exibir_prioridade' => 'impressao.exibirPrioridade',
+                        'impressao_exibir_nome_unidade' => 'impressao.exibirNomeUnidade',
+                        'impressao_exibir_nome_servico' => 'impressao.exibirNomeServico',
+                        'impressao_exibir_mensagem_servico' => 'impressao.exibirMensagemServico',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                        'nome' => 'nome',
+                        'descricao' => 'descricao',
+                        'ativo' => 'ativo',
+                        'createdAt' => 'created_at',
+                        'updatedAt' => 'updated_at',
+                        'deletedAt' => 'deleted_at',
+                        'impressao.cabecalho' => 'impressao_cabecalho',
+                        'impressao.rodape' => 'impressao_rodape',
+                        'impressao.exibirData' => 'impressao_exibir_data',
+                        'impressao.exibirPrioridade' => 'impressao_exibir_prioridade',
+                        'impressao.exibirNomeUnidade' => 'impressao_exibir_nome_unidade',
+                        'impressao.exibirNomeServico' => 'impressao_exibir_nome_servico',
+                        'impressao.exibirMensagemServico' => 'impressao_exibir_mensagem_servico',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'unidades',
+                    ],
+                ],
+                'entityListeners' => [
+                    [
+                        'prePersist' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\UnidadeListener',
+                                'method' => 'prePersist',
+                            ],
+                        ],
+                        'preUpdate' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\UnidadeListener',
+                                'method' => 'preUpdate',
+                            ],
+                        ],
+                        'preRemove' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\UnidadeListener',
+                                'method' => 'preRemove',
+                            ],
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

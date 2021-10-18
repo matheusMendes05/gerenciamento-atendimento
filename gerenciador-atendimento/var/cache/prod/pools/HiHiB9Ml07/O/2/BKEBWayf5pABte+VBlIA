@@ -1,0 +1,266 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\AssignedGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\AssignedGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\ServicoUnidade',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\ServicoUnidade',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ORM\\ServicoUnidadeRepository',
+                ],
+                'identifier' => [
+                    [
+                        'servico',
+                        'unidade',
+                    ],
+                ],
+                'fieldMappings' => [
+                    [
+                        'sigla' => [
+                            'fieldName' => 'sigla',
+                            'type' => 'string',
+                            'length' => 3,
+                            'precision' => 0,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'sigla',
+                        ],
+                        'ativo' => [
+                            'fieldName' => 'ativo',
+                            'type' => 'boolean',
+                            'nullable' => false,
+                            'columnName' => 'ativo',
+                        ],
+                        'peso' => [
+                            'fieldName' => 'peso',
+                            'type' => 'smallint',
+                            'precision' => 0,
+                            'scale' => 0,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'peso',
+                        ],
+                        'prioridade' => [
+                            'fieldName' => 'prioridade',
+                            'type' => 'boolean',
+                            'nullable' => false,
+                            'columnName' => 'prioridade',
+                        ],
+                        'numeroInicial' => [
+                            'fieldName' => 'numeroInicial',
+                            'type' => 'integer',
+                            'nullable' => false,
+                            'columnName' => 'numero_inicial',
+                        ],
+                        'numeroFinal' => [
+                            'fieldName' => 'numeroFinal',
+                            'type' => 'integer',
+                            'nullable' => true,
+                            'columnName' => 'numero_final',
+                        ],
+                        'incremento' => [
+                            'fieldName' => 'incremento',
+                            'type' => 'integer',
+                            'nullable' => false,
+                            'columnName' => 'incremento',
+                        ],
+                        'mensagem' => [
+                            'fieldName' => 'mensagem',
+                            'type' => 'string',
+                            'length' => 255,
+                            'nullable' => true,
+                            'columnName' => 'mensagem',
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'sigla' => 'sigla',
+                        'ativo' => 'ativo',
+                        'peso' => 'peso',
+                        'prioridade' => 'prioridade',
+                        'numero_inicial' => 'numeroInicial',
+                        'numero_final' => 'numeroFinal',
+                        'incremento' => 'incremento',
+                        'mensagem' => 'mensagem',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'sigla' => 'sigla',
+                        'ativo' => 'ativo',
+                        'peso' => 'peso',
+                        'prioridade' => 'prioridade',
+                        'numeroInicial' => 'numero_inicial',
+                        'numeroFinal' => 'numero_final',
+                        'incremento' => 'incremento',
+                        'mensagem' => 'mensagem',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'servicos_unidades',
+                    ],
+                ],
+                'associationMappings' => [
+                    [
+                        'servico' => [
+                            'fieldName' => 'servico',
+                            'targetEntity' => 'Novosga\\Entity\\Servico',
+                            'id' => true,
+                            'fetch' => 2,
+                            'inversedBy' => 'servicosUnidade',
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'servico_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\ServicoUnidade',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'servico_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'servico_id' => 'servico_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'servico_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'unidade' => [
+                            'fieldName' => 'unidade',
+                            'targetEntity' => 'Novosga\\Entity\\Unidade',
+                            'id' => true,
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'unidade_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\ServicoUnidade',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'unidade_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'unidade_id' => 'unidade_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'unidade_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'local' => [
+                            'fieldName' => 'local',
+                            'targetEntity' => 'Novosga\\Entity\\Local',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'local_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\ServicoUnidade',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'local_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'local_id' => 'local_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'local_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'departamento' => [
+                            'fieldName' => 'departamento',
+                            'targetEntity' => 'Novosga\\Entity\\Departamento',
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'departamento_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\ServicoUnidade',
+                            'fetch' => 2,
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'departamento_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'departamento_id' => 'departamento_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'departamento_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                    ],
+                ],
+                'isIdentifierComposite' => [
+                    true,
+                ],
+                'containsForeignIdentifier' => [
+                    true,
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

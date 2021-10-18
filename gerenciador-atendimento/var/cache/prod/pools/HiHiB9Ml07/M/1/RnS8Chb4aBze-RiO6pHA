@@ -1,0 +1,77 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+            clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+            clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+        ],
+        null,
+        [
+            'Doctrine\\ORM\\Query\\ParserResult' => [
+                '_sqlExecutor' => [
+                    $o[1],
+                ],
+                '_resultSetMapping' => [
+                    $o[2],
+                ],
+            ],
+            'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+                '_sqlStatements' => [
+                    1 => 'SELECT p0_.id AS id_0, p0_.nome AS nome_1, p0_.descricao AS descricao_2, p0_.peso AS peso_3, p0_.ativo AS ativo_4, p0_.created_at AS created_at_5, p0_.updated_at AS updated_at_6, p0_.deleted_at AS deleted_at_7 FROM prioridades p0_ WHERE p0_.deleted_at IS NULL ORDER BY p0_.nome ASC',
+                ],
+            ],
+            'stdClass' => [
+                'aliasMap' => [
+                    2 => [
+                        'e' => 'Novosga\\Entity\\Prioridade',
+                    ],
+                ],
+                'fieldMappings' => [
+                    2 => [
+                        'id_0' => 'id',
+                        'nome_1' => 'nome',
+                        'descricao_2' => 'descricao',
+                        'peso_3' => 'peso',
+                        'ativo_4' => 'ativo',
+                        'created_at_5' => 'createdAt',
+                        'updated_at_6' => 'updatedAt',
+                        'deleted_at_7' => 'deletedAt',
+                    ],
+                ],
+                'entityMappings' => [
+                    2 => [
+                        'e' => null,
+                    ],
+                ],
+                'columnOwnerMap' => [
+                    2 => [
+                        'id_0' => 'e',
+                        'nome_1' => 'e',
+                        'descricao_2' => 'e',
+                        'peso_3' => 'e',
+                        'ativo_4' => 'e',
+                        'created_at_5' => 'e',
+                        'updated_at_6' => 'e',
+                        'deleted_at_7' => 'e',
+                    ],
+                ],
+                'declaringClasses' => [
+                    2 => [
+                        'id_0' => 'Novosga\\Entity\\Prioridade',
+                        'nome_1' => 'Novosga\\Entity\\Prioridade',
+                        'descricao_2' => 'Novosga\\Entity\\Prioridade',
+                        'peso_3' => 'Novosga\\Entity\\Prioridade',
+                        'ativo_4' => 'Novosga\\Entity\\Prioridade',
+                        'created_at_5' => 'Novosga\\Entity\\Prioridade',
+                        'updated_at_6' => 'Novosga\\Entity\\Prioridade',
+                        'deleted_at_7' => 'Novosga\\Entity\\Prioridade',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

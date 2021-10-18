@@ -1,0 +1,414 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\AbstractAtendimento',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\AbstractAtendimento',
+                ],
+                'isMappedSuperclass' => [
+                    true,
+                ],
+                'embeddedClasses' => [
+                    [
+                        'senha' => [
+                            'class' => 'Novosga\\Entity\\Senha',
+                            'columnPrefix' => 'senha_',
+                            'declaredField' => null,
+                            'originalField' => null,
+                        ],
+                    ],
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'id' => true,
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'columnName' => 'id',
+                        ],
+                        'local' => [
+                            'fieldName' => 'local',
+                            'type' => 'smallint',
+                            'columnName' => 'num_local',
+                            'precision' => 0,
+                            'scale' => 0,
+                            'unique' => false,
+                            'nullable' => true,
+                        ],
+                        'dataAgendamento' => [
+                            'fieldName' => 'dataAgendamento',
+                            'type' => 'datetime',
+                            'columnName' => 'dt_age',
+                            'nullable' => true,
+                        ],
+                        'dataChegada' => [
+                            'fieldName' => 'dataChegada',
+                            'type' => 'datetime',
+                            'columnName' => 'dt_cheg',
+                            'nullable' => false,
+                        ],
+                        'dataChamada' => [
+                            'fieldName' => 'dataChamada',
+                            'type' => 'datetime',
+                            'columnName' => 'dt_cha',
+                            'nullable' => true,
+                        ],
+                        'dataInicio' => [
+                            'fieldName' => 'dataInicio',
+                            'type' => 'datetime',
+                            'columnName' => 'dt_ini',
+                            'nullable' => true,
+                        ],
+                        'dataFim' => [
+                            'fieldName' => 'dataFim',
+                            'type' => 'datetime',
+                            'columnName' => 'dt_fim',
+                            'nullable' => true,
+                        ],
+                        'tempoEspera' => [
+                            'fieldName' => 'tempoEspera',
+                            'type' => 'integer',
+                            'columnName' => 'tempo_espera',
+                            'nullable' => true,
+                        ],
+                        'tempoPermanencia' => [
+                            'fieldName' => 'tempoPermanencia',
+                            'type' => 'integer',
+                            'columnName' => 'tempo_permanencia',
+                            'nullable' => true,
+                        ],
+                        'tempoAtendimento' => [
+                            'fieldName' => 'tempoAtendimento',
+                            'type' => 'integer',
+                            'columnName' => 'tempo_atendimento',
+                            'nullable' => true,
+                        ],
+                        'tempoDeslocamento' => [
+                            'fieldName' => 'tempoDeslocamento',
+                            'type' => 'integer',
+                            'columnName' => 'tempo_deslocamento',
+                            'nullable' => true,
+                        ],
+                        'status' => [
+                            'fieldName' => 'status',
+                            'type' => 'string',
+                            'length' => 25,
+                            'nullable' => false,
+                            'columnName' => 'status',
+                        ],
+                        'resolucao' => [
+                            'fieldName' => 'resolucao',
+                            'type' => 'string',
+                            'length' => 25,
+                            'nullable' => true,
+                            'columnName' => 'resolucao',
+                        ],
+                        'observacao' => [
+                            'fieldName' => 'observacao',
+                            'type' => 'text',
+                            'nullable' => true,
+                            'columnName' => 'observacao',
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                        'num_local' => 'local',
+                        'dt_age' => 'dataAgendamento',
+                        'dt_cheg' => 'dataChegada',
+                        'dt_cha' => 'dataChamada',
+                        'dt_ini' => 'dataInicio',
+                        'dt_fim' => 'dataFim',
+                        'tempo_espera' => 'tempoEspera',
+                        'tempo_permanencia' => 'tempoPermanencia',
+                        'tempo_atendimento' => 'tempoAtendimento',
+                        'tempo_deslocamento' => 'tempoDeslocamento',
+                        'status' => 'status',
+                        'resolucao' => 'resolucao',
+                        'observacao' => 'observacao',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                        'local' => 'num_local',
+                        'dataAgendamento' => 'dt_age',
+                        'dataChegada' => 'dt_cheg',
+                        'dataChamada' => 'dt_cha',
+                        'dataInicio' => 'dt_ini',
+                        'dataFim' => 'dt_fim',
+                        'tempoEspera' => 'tempo_espera',
+                        'tempoPermanencia' => 'tempo_permanencia',
+                        'tempoAtendimento' => 'tempo_atendimento',
+                        'tempoDeslocamento' => 'tempo_deslocamento',
+                        'status' => 'status',
+                        'resolucao' => 'resolucao',
+                        'observacao' => 'observacao',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'abstract_atendimento',
+                    ],
+                ],
+                'associationMappings' => [
+                    [
+                        'cliente' => [
+                            'fieldName' => 'cliente',
+                            'targetEntity' => 'Novosga\\Entity\\Cliente',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'cliente_id',
+                                ],
+                            ],
+                            'cascade' => [
+                                'persist',
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\AbstractAtendimento',
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => true,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'cliente_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'cliente_id' => 'cliente_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'cliente_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'unidade' => [
+                            'fieldName' => 'unidade',
+                            'targetEntity' => 'Novosga\\Entity\\Unidade',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'unidade_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\AbstractAtendimento',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'unidade_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'unidade_id' => 'unidade_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'unidade_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'servico' => [
+                            'fieldName' => 'servico',
+                            'targetEntity' => 'Novosga\\Entity\\Servico',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'servico_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\AbstractAtendimento',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'servico_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'servico_id' => 'servico_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'servico_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'prioridade' => [
+                            'fieldName' => 'prioridade',
+                            'targetEntity' => 'Novosga\\Entity\\Prioridade',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'prioridade_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\AbstractAtendimento',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'prioridade_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'prioridade_id' => 'prioridade_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'prioridade_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'usuario' => [
+                            'fieldName' => 'usuario',
+                            'targetEntity' => 'Novosga\\Entity\\Usuario',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'usuario_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\AbstractAtendimento',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'usuario_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'usuario_id' => 'usuario_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'usuario_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'usuarioTriagem' => [
+                            'fieldName' => 'usuarioTriagem',
+                            'targetEntity' => 'Novosga\\Entity\\Usuario',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'usuario_tri_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\AbstractAtendimento',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'usuario_tri_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'usuario_tri_id' => 'usuario_tri_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'usuario_tri_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'pai' => [
+                            'fieldName' => 'pai',
+                            'targetEntity' => 'Novosga\\Entity\\Atendimento',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'atendimento_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\AbstractAtendimento',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'atendimento_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'atendimento_id' => 'atendimento_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'atendimento_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

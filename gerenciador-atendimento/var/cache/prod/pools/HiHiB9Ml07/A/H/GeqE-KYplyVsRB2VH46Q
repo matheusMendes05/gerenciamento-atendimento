@@ -1,0 +1,107 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\AssignedGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\AssignedGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\ConfiguracaoImpressao',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\ConfiguracaoImpressao',
+                ],
+                'isEmbeddedClass' => [
+                    true,
+                ],
+                'fieldMappings' => [
+                    [
+                        'cabecalho' => [
+                            'fieldName' => 'cabecalho',
+                            'type' => 'string',
+                            'length' => 150,
+                            'nullable' => false,
+                            'columnName' => 'cabecalho',
+                        ],
+                        'rodape' => [
+                            'fieldName' => 'rodape',
+                            'type' => 'string',
+                            'length' => 150,
+                            'nullable' => false,
+                            'columnName' => 'rodape',
+                        ],
+                        'exibirData' => [
+                            'fieldName' => 'exibirData',
+                            'type' => 'boolean',
+                            'columnName' => 'exibir_data',
+                            'nullable' => false,
+                        ],
+                        'exibirPrioridade' => [
+                            'fieldName' => 'exibirPrioridade',
+                            'type' => 'boolean',
+                            'columnName' => 'exibir_prioridade',
+                            'nullable' => false,
+                        ],
+                        'exibirNomeUnidade' => [
+                            'fieldName' => 'exibirNomeUnidade',
+                            'type' => 'boolean',
+                            'columnName' => 'exibir_nome_unidade',
+                            'nullable' => false,
+                        ],
+                        'exibirNomeServico' => [
+                            'fieldName' => 'exibirNomeServico',
+                            'type' => 'boolean',
+                            'columnName' => 'exibir_nome_servico',
+                            'nullable' => false,
+                        ],
+                        'exibirMensagemServico' => [
+                            'fieldName' => 'exibirMensagemServico',
+                            'type' => 'boolean',
+                            'columnName' => 'exibir_mensagem_servico',
+                            'nullable' => false,
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'cabecalho' => 'cabecalho',
+                        'rodape' => 'rodape',
+                        'exibir_data' => 'exibirData',
+                        'exibir_prioridade' => 'exibirPrioridade',
+                        'exibir_nome_unidade' => 'exibirNomeUnidade',
+                        'exibir_nome_servico' => 'exibirNomeServico',
+                        'exibir_mensagem_servico' => 'exibirMensagemServico',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'cabecalho' => 'cabecalho',
+                        'rodape' => 'rodape',
+                        'exibirData' => 'exibir_data',
+                        'exibirPrioridade' => 'exibir_prioridade',
+                        'exibirNomeUnidade' => 'exibir_nome_unidade',
+                        'exibirNomeServico' => 'exibir_nome_servico',
+                        'exibirMensagemServico' => 'exibir_mensagem_servico',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'configuracao_impressao',
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

@@ -1,0 +1,143 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+            clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+            clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+        ],
+        null,
+        [
+            'Doctrine\\ORM\\Query\\ParserResult' => [
+                '_sqlExecutor' => [
+                    $o[1],
+                ],
+                '_resultSetMapping' => [
+                    $o[2],
+                ],
+                '_parameterMappings' => [
+                    [
+                        'usuario' => [
+                            0,
+                        ],
+                        'status' => [
+                            1,
+                        ],
+                        'unidade' => [
+                            2,
+                        ],
+                    ],
+                ],
+            ],
+            'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+                '_sqlStatements' => [
+                    1 => 'SELECT a0_.id AS id_0, a0_.num_local AS num_local_1, a0_.dt_age AS dt_age_2, a0_.dt_cheg AS dt_cheg_3, a0_.dt_cha AS dt_cha_4, a0_.dt_ini AS dt_ini_5, a0_.dt_fim AS dt_fim_6, a0_.tempo_espera AS tempo_espera_7, a0_.tempo_permanencia AS tempo_permanencia_8, a0_.tempo_atendimento AS tempo_atendimento_9, a0_.tempo_deslocamento AS tempo_deslocamento_10, a0_.status AS status_11, a0_.resolucao AS resolucao_12, a0_.observacao AS observacao_13, a0_.senha_sigla AS senha_sigla_14, a0_.senha_numero AS senha_numero_15, a0_.cliente_id AS cliente_id_16, a0_.unidade_id AS unidade_id_17, a0_.servico_id AS servico_id_18, a0_.prioridade_id AS prioridade_id_19, a0_.usuario_id AS usuario_id_20, a0_.usuario_tri_id AS usuario_tri_id_21, a0_.atendimento_id AS atendimento_id_22 FROM atendimentos a0_ WHERE a0_.usuario_id = ? AND a0_.status IN (?) AND a0_.unidade_id = ?',
+                ],
+            ],
+            'stdClass' => [
+                'aliasMap' => [
+                    2 => [
+                        'e' => 'Novosga\\Entity\\Atendimento',
+                    ],
+                ],
+                'fieldMappings' => [
+                    2 => [
+                        'id_0' => 'id',
+                        'num_local_1' => 'local',
+                        'dt_age_2' => 'dataAgendamento',
+                        'dt_cheg_3' => 'dataChegada',
+                        'dt_cha_4' => 'dataChamada',
+                        'dt_ini_5' => 'dataInicio',
+                        'dt_fim_6' => 'dataFim',
+                        'tempo_espera_7' => 'tempoEspera',
+                        'tempo_permanencia_8' => 'tempoPermanencia',
+                        'tempo_atendimento_9' => 'tempoAtendimento',
+                        'tempo_deslocamento_10' => 'tempoDeslocamento',
+                        'status_11' => 'status',
+                        'resolucao_12' => 'resolucao',
+                        'observacao_13' => 'observacao',
+                        'senha_sigla_14' => 'senha.sigla',
+                        'senha_numero_15' => 'senha.numero',
+                    ],
+                ],
+                'typeMappings' => [
+                    2 => [
+                        'cliente_id_16' => 'integer',
+                        'unidade_id_17' => 'integer',
+                        'servico_id_18' => 'integer',
+                        'prioridade_id_19' => 'integer',
+                        'usuario_id_20' => 'integer',
+                        'usuario_tri_id_21' => 'integer',
+                        'atendimento_id_22' => 'integer',
+                    ],
+                ],
+                'entityMappings' => [
+                    2 => [
+                        'e' => null,
+                    ],
+                ],
+                'metaMappings' => [
+                    2 => [
+                        'cliente_id_16' => 'cliente_id',
+                        'unidade_id_17' => 'unidade_id',
+                        'servico_id_18' => 'servico_id',
+                        'prioridade_id_19' => 'prioridade_id',
+                        'usuario_id_20' => 'usuario_id',
+                        'usuario_tri_id_21' => 'usuario_tri_id',
+                        'atendimento_id_22' => 'atendimento_id',
+                    ],
+                ],
+                'columnOwnerMap' => [
+                    2 => [
+                        'id_0' => 'e',
+                        'num_local_1' => 'e',
+                        'dt_age_2' => 'e',
+                        'dt_cheg_3' => 'e',
+                        'dt_cha_4' => 'e',
+                        'dt_ini_5' => 'e',
+                        'dt_fim_6' => 'e',
+                        'tempo_espera_7' => 'e',
+                        'tempo_permanencia_8' => 'e',
+                        'tempo_atendimento_9' => 'e',
+                        'tempo_deslocamento_10' => 'e',
+                        'status_11' => 'e',
+                        'resolucao_12' => 'e',
+                        'observacao_13' => 'e',
+                        'senha_sigla_14' => 'e',
+                        'senha_numero_15' => 'e',
+                        'cliente_id_16' => 'e',
+                        'unidade_id_17' => 'e',
+                        'servico_id_18' => 'e',
+                        'prioridade_id_19' => 'e',
+                        'usuario_id_20' => 'e',
+                        'usuario_tri_id_21' => 'e',
+                        'atendimento_id_22' => 'e',
+                    ],
+                ],
+                'declaringClasses' => [
+                    2 => [
+                        'id_0' => 'Novosga\\Entity\\Atendimento',
+                        'num_local_1' => 'Novosga\\Entity\\Atendimento',
+                        'dt_age_2' => 'Novosga\\Entity\\Atendimento',
+                        'dt_cheg_3' => 'Novosga\\Entity\\Atendimento',
+                        'dt_cha_4' => 'Novosga\\Entity\\Atendimento',
+                        'dt_ini_5' => 'Novosga\\Entity\\Atendimento',
+                        'dt_fim_6' => 'Novosga\\Entity\\Atendimento',
+                        'tempo_espera_7' => 'Novosga\\Entity\\Atendimento',
+                        'tempo_permanencia_8' => 'Novosga\\Entity\\Atendimento',
+                        'tempo_atendimento_9' => 'Novosga\\Entity\\Atendimento',
+                        'tempo_deslocamento_10' => 'Novosga\\Entity\\Atendimento',
+                        'status_11' => 'Novosga\\Entity\\Atendimento',
+                        'resolucao_12' => 'Novosga\\Entity\\Atendimento',
+                        'observacao_13' => 'Novosga\\Entity\\Atendimento',
+                        'senha_sigla_14' => 'Novosga\\Entity\\Atendimento',
+                        'senha_numero_15' => 'Novosga\\Entity\\Atendimento',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

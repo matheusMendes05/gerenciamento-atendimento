@@ -1,0 +1,71 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+            clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+            clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+        ],
+        null,
+        [
+            'Doctrine\\ORM\\Query\\ParserResult' => [
+                '_sqlExecutor' => [
+                    $o[1],
+                ],
+                '_resultSetMapping' => [
+                    $o[2],
+                ],
+            ],
+            'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+                '_sqlStatements' => [
+                    1 => 'SELECT p0_.id AS id_0, p0_.nome AS nome_1, p0_.descricao AS descricao_2, p0_.modulos AS modulos_3, p0_.created_at AS created_at_4, p0_.updated_at AS updated_at_5 FROM perfis p0_',
+                ],
+            ],
+            'stdClass' => [
+                'aliasMap' => [
+                    2 => [
+                        'e' => 'Novosga\\Entity\\Perfil',
+                    ],
+                ],
+                'fieldMappings' => [
+                    2 => [
+                        'id_0' => 'id',
+                        'nome_1' => 'nome',
+                        'descricao_2' => 'descricao',
+                        'modulos_3' => 'modulos',
+                        'created_at_4' => 'createdAt',
+                        'updated_at_5' => 'updatedAt',
+                    ],
+                ],
+                'entityMappings' => [
+                    2 => [
+                        'e' => null,
+                    ],
+                ],
+                'columnOwnerMap' => [
+                    2 => [
+                        'id_0' => 'e',
+                        'nome_1' => 'e',
+                        'descricao_2' => 'e',
+                        'modulos_3' => 'e',
+                        'created_at_4' => 'e',
+                        'updated_at_5' => 'e',
+                    ],
+                ],
+                'declaringClasses' => [
+                    2 => [
+                        'id_0' => 'Novosga\\Entity\\Perfil',
+                        'nome_1' => 'Novosga\\Entity\\Perfil',
+                        'descricao_2' => 'Novosga\\Entity\\Perfil',
+                        'modulos_3' => 'Novosga\\Entity\\Perfil',
+                        'created_at_4' => 'Novosga\\Entity\\Perfil',
+                        'updated_at_5' => 'Novosga\\Entity\\Perfil',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

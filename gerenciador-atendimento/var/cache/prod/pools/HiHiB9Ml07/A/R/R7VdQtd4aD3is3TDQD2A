@@ -1,0 +1,84 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\AssignedGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\AssignedGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Metadata',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Metadata',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ORM\\MetadataRepository',
+                ],
+                'identifier' => [
+                    [
+                        'namespace',
+                        'name',
+                    ],
+                ],
+                'fieldMappings' => [
+                    [
+                        'namespace' => [
+                            'id' => true,
+                            'fieldName' => 'namespace',
+                            'type' => 'string',
+                            'length' => 30,
+                            'columnName' => 'namespace',
+                        ],
+                        'name' => [
+                            'id' => true,
+                            'fieldName' => 'name',
+                            'type' => 'string',
+                            'length' => 30,
+                            'columnName' => 'name',
+                        ],
+                        'value' => [
+                            'fieldName' => 'value',
+                            'type' => 'json_array',
+                            'nullable' => false,
+                            'columnName' => 'value',
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'namespace' => 'namespace',
+                        'name' => 'name',
+                        'value' => 'value',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'namespace' => 'namespace',
+                        'name' => 'name',
+                        'value' => 'value',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'metadata',
+                    ],
+                ],
+                'isIdentifierComposite' => [
+                    true,
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

@@ -1,0 +1,128 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\AssignedGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\AssignedGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\UsuarioMeta',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\UsuarioMeta',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ORM\\EntityMetadataRepository',
+                ],
+                'identifier' => [
+                    [
+                        'namespace',
+                        'name',
+                        'entity',
+                    ],
+                ],
+                'fieldMappings' => [
+                    [
+                        'namespace' => [
+                            'id' => true,
+                            'fieldName' => 'namespace',
+                            'type' => 'string',
+                            'length' => 30,
+                            'columnName' => 'namespace',
+                            'declared' => 'Novosga\\Entity\\EntityMetadata',
+                        ],
+                        'name' => [
+                            'id' => true,
+                            'fieldName' => 'name',
+                            'type' => 'string',
+                            'length' => 30,
+                            'columnName' => 'name',
+                            'declared' => 'Novosga\\Entity\\EntityMetadata',
+                        ],
+                        'value' => [
+                            'fieldName' => 'value',
+                            'type' => 'json_array',
+                            'nullable' => false,
+                            'columnName' => 'value',
+                            'declared' => 'Novosga\\Entity\\EntityMetadata',
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'namespace' => 'namespace',
+                        'name' => 'name',
+                        'value' => 'value',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'namespace' => 'namespace',
+                        'name' => 'name',
+                        'value' => 'value',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'usuarios_metadata',
+                    ],
+                ],
+                'associationMappings' => [
+                    [
+                        'entity' => [
+                            'fieldName' => 'entity',
+                            'targetEntity' => 'Novosga\\Entity\\Usuario',
+                            'id' => true,
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'usuario_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\UsuarioMeta',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'usuario_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'usuario_id' => 'usuario_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'usuario_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                    ],
+                ],
+                'isIdentifierComposite' => [
+                    true,
+                ],
+                'containsForeignIdentifier' => [
+                    true,
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

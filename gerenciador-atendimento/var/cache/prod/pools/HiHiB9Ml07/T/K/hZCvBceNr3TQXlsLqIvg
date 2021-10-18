@@ -1,0 +1,173 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Lotacao',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Lotacao',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ORM\\LotacaoRepository',
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'id' => true,
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'columnName' => 'id',
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'lotacoes',
+                        'uniqueConstraints' => [
+                            'lotacao_usuario_unidade_idx' => [
+                                'columns' => [
+                                    'usuario_id',
+                                    'unidade_id',
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+                'associationMappings' => [
+                    [
+                        'usuario' => [
+                            'fieldName' => 'usuario',
+                            'targetEntity' => 'Novosga\\Entity\\Usuario',
+                            'fetch' => 2,
+                            'inversedBy' => 'lotacoes',
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'usuario_id',
+                                ],
+                            ],
+                            'cascade' => [],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\Lotacao',
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'usuario_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'usuario_id' => 'usuario_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'usuario_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'unidade' => [
+                            'fieldName' => 'unidade',
+                            'targetEntity' => 'Novosga\\Entity\\Unidade',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'unidade_id',
+                                ],
+                            ],
+                            'cascade' => [],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\Lotacao',
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'unidade_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'unidade_id' => 'unidade_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'unidade_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'perfil' => [
+                            'fieldName' => 'perfil',
+                            'targetEntity' => 'Novosga\\Entity\\Perfil',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'perfil_id',
+                                ],
+                            ],
+                            'cascade' => [],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\Lotacao',
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'perfil_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'perfil_id' => 'perfil_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'perfil_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

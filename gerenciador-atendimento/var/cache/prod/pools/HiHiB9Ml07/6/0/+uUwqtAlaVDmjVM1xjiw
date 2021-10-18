@@ -1,0 +1,217 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\PainelSenha',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\PainelSenha',
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'id' => true,
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'columnName' => 'id',
+                        ],
+                        'numeroSenha' => [
+                            'fieldName' => 'numeroSenha',
+                            'type' => 'integer',
+                            'columnName' => 'num_senha',
+                            'unique' => false,
+                            'nullable' => false,
+                        ],
+                        'siglaSenha' => [
+                            'fieldName' => 'siglaSenha',
+                            'type' => 'string',
+                            'columnName' => 'sig_senha',
+                            'length' => 3,
+                            'unique' => false,
+                            'nullable' => false,
+                        ],
+                        'mensagem' => [
+                            'fieldName' => 'mensagem',
+                            'type' => 'string',
+                            'columnName' => 'msg_senha',
+                            'length' => 255,
+                            'unique' => false,
+                            'nullable' => false,
+                        ],
+                        'local' => [
+                            'fieldName' => 'local',
+                            'type' => 'string',
+                            'length' => 15,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'local',
+                        ],
+                        'numeroLocal' => [
+                            'fieldName' => 'numeroLocal',
+                            'type' => 'smallint',
+                            'columnName' => 'num_local',
+                            'unique' => false,
+                            'nullable' => false,
+                        ],
+                        'peso' => [
+                            'fieldName' => 'peso',
+                            'type' => 'smallint',
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'peso',
+                        ],
+                        'prioridade' => [
+                            'fieldName' => 'prioridade',
+                            'type' => 'string',
+                            'length' => 100,
+                            'unique' => false,
+                            'nullable' => true,
+                            'columnName' => 'prioridade',
+                        ],
+                        'nomeCliente' => [
+                            'fieldName' => 'nomeCliente',
+                            'type' => 'string',
+                            'columnName' => 'nome_cliente',
+                            'length' => 100,
+                            'unique' => false,
+                            'nullable' => true,
+                        ],
+                        'documentoCliente' => [
+                            'fieldName' => 'documentoCliente',
+                            'type' => 'string',
+                            'columnName' => 'documento_cliente',
+                            'length' => 30,
+                            'unique' => false,
+                            'nullable' => true,
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                        'num_senha' => 'numeroSenha',
+                        'sig_senha' => 'siglaSenha',
+                        'msg_senha' => 'mensagem',
+                        'local' => 'local',
+                        'num_local' => 'numeroLocal',
+                        'peso' => 'peso',
+                        'prioridade' => 'prioridade',
+                        'nome_cliente' => 'nomeCliente',
+                        'documento_cliente' => 'documentoCliente',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                        'numeroSenha' => 'num_senha',
+                        'siglaSenha' => 'sig_senha',
+                        'mensagem' => 'msg_senha',
+                        'local' => 'local',
+                        'numeroLocal' => 'num_local',
+                        'peso' => 'peso',
+                        'prioridade' => 'prioridade',
+                        'nomeCliente' => 'nome_cliente',
+                        'documentoCliente' => 'documento_cliente',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'painel_senha',
+                    ],
+                ],
+                'associationMappings' => [
+                    [
+                        'servico' => [
+                            'fieldName' => 'servico',
+                            'targetEntity' => 'Novosga\\Entity\\Servico',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'servico_id',
+                                ],
+                            ],
+                            'cascade' => [],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\PainelSenha',
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'servico_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'servico_id' => 'servico_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'servico_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'unidade' => [
+                            'fieldName' => 'unidade',
+                            'targetEntity' => 'Novosga\\Entity\\Unidade',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'unidade_id',
+                                ],
+                            ],
+                            'cascade' => [],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\PainelSenha',
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'unidade_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'unidade_id' => 'unidade_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'unidade_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

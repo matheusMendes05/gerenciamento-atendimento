@@ -1,0 +1,188 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Agendamento',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Agendamento',
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'id' => true,
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'columnName' => 'id',
+                        ],
+                        'data' => [
+                            'fieldName' => 'data',
+                            'type' => 'date',
+                            'columnName' => 'data',
+                            'nullable' => false,
+                        ],
+                        'hora' => [
+                            'fieldName' => 'hora',
+                            'type' => 'time',
+                            'columnName' => 'hora',
+                            'nullable' => false,
+                        ],
+                        'dataConfirmacao' => [
+                            'fieldName' => 'dataConfirmacao',
+                            'type' => 'datetime',
+                            'columnName' => 'data_confirmacao',
+                            'nullable' => true,
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                        'data' => 'data',
+                        'hora' => 'hora',
+                        'data_confirmacao' => 'dataConfirmacao',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                        'data' => 'data',
+                        'hora' => 'hora',
+                        'dataConfirmacao' => 'data_confirmacao',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'agendamentos',
+                    ],
+                ],
+                'associationMappings' => [
+                    [
+                        'cliente' => [
+                            'fieldName' => 'cliente',
+                            'targetEntity' => 'Novosga\\Entity\\Cliente',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'cliente_id',
+                                ],
+                            ],
+                            'cascade' => [
+                                'persist',
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\Agendamento',
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => true,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'cliente_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'cliente_id' => 'cliente_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'cliente_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'unidade' => [
+                            'fieldName' => 'unidade',
+                            'targetEntity' => 'Novosga\\Entity\\Unidade',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'unidade_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\Agendamento',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'unidade_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'unidade_id' => 'unidade_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'unidade_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                        'servico' => [
+                            'fieldName' => 'servico',
+                            'targetEntity' => 'Novosga\\Entity\\Servico',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'servico_id',
+                                ],
+                            ],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\Agendamento',
+                            'cascade' => [],
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'servico_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'servico_id' => 'servico_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'servico_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

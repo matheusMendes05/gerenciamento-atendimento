@@ -1,0 +1,103 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+            ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\Length'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Length')),
+            clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+            clone $p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'],
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Usuario',
+                    'nome',
+                ],
+                'defaultGroup' => [
+                    'Usuario',
+                ],
+                'members' => [
+                    [
+                        'nome' => [
+                            $o[1],
+                        ],
+                    ],
+                ],
+                'properties' => [
+                    [
+                        'nome' => $o[1],
+                    ],
+                ],
+                'constraints' => [
+                    [
+                        $o[4],
+                        $o[5],
+                    ],
+                    [
+                        $o[2],
+                        $o[3],
+                    ],
+                ],
+                'constraintsByGroup' => [
+                    [
+                        'Default' => [
+                            $o[4],
+                            $o[5],
+                        ],
+                        'Usuario' => [
+                            $o[4],
+                            $o[5],
+                        ],
+                    ],
+                    [
+                        'Default' => [
+                            $o[2],
+                            $o[3],
+                        ],
+                        'Usuario' => [
+                            $o[2],
+                            $o[3],
+                        ],
+                    ],
+                ],
+                'class' => [
+                    1 => 'Novosga\\Entity\\Usuario',
+                ],
+                'property' => [
+                    1 => 'nome',
+                ],
+                'groups' => [
+                    2 => [
+                        'Default',
+                        'Usuario',
+                    ],
+                    [
+                        'Default',
+                        'Usuario',
+                    ],
+                    [
+                        'Default',
+                        'Usuario',
+                    ],
+                    [
+                        'Default',
+                        'Usuario',
+                    ],
+                ],
+                'min' => [
+                    3 => 3,
+                ],
+                'fields' => [
+                    4 => 'login',
+                    'email',
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

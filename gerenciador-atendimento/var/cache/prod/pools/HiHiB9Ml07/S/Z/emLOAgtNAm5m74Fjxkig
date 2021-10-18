@@ -1,0 +1,257 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Usuario',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Usuario',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ORM\\UsuarioRepository',
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'id' => true,
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'columnName' => 'id',
+                        ],
+                        'login' => [
+                            'fieldName' => 'login',
+                            'type' => 'string',
+                            'length' => 30,
+                            'unique' => true,
+                            'nullable' => false,
+                            'columnName' => 'login',
+                        ],
+                        'nome' => [
+                            'fieldName' => 'nome',
+                            'type' => 'string',
+                            'length' => 20,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'nome',
+                        ],
+                        'sobrenome' => [
+                            'fieldName' => 'sobrenome',
+                            'type' => 'string',
+                            'length' => 100,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'sobrenome',
+                        ],
+                        'email' => [
+                            'fieldName' => 'email',
+                            'type' => 'string',
+                            'length' => 150,
+                            'unique' => true,
+                            'nullable' => true,
+                            'columnName' => 'email',
+                        ],
+                        'senha' => [
+                            'fieldName' => 'senha',
+                            'type' => 'string',
+                            'length' => 128,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'senha',
+                        ],
+                        'ativo' => [
+                            'fieldName' => 'ativo',
+                            'type' => 'boolean',
+                            'nullable' => false,
+                            'columnName' => 'ativo',
+                        ],
+                        'ultimoAcesso' => [
+                            'fieldName' => 'ultimoAcesso',
+                            'type' => 'datetime',
+                            'columnName' => 'ultimo_acesso',
+                            'unique' => false,
+                            'nullable' => true,
+                        ],
+                        'ip' => [
+                            'fieldName' => 'ip',
+                            'type' => 'string',
+                            'length' => 15,
+                            'unique' => false,
+                            'nullable' => true,
+                            'columnName' => 'ip',
+                        ],
+                        'sessionId' => [
+                            'fieldName' => 'sessionId',
+                            'type' => 'string',
+                            'columnName' => 'session_id',
+                            'length' => 50,
+                            'precision' => 0,
+                            'scale' => 0,
+                            'unique' => false,
+                            'nullable' => true,
+                        ],
+                        'algorithm' => [
+                            'fieldName' => 'algorithm',
+                            'type' => 'string',
+                            'length' => 10,
+                            'unique' => false,
+                            'nullable' => false,
+                            'columnName' => 'algorithm',
+                        ],
+                        'admin' => [
+                            'fieldName' => 'admin',
+                            'type' => 'boolean',
+                            'nullable' => false,
+                            'columnName' => 'admin',
+                        ],
+                        'salt' => [
+                            'fieldName' => 'salt',
+                            'type' => 'string',
+                            'length' => 60,
+                            'nullable' => true,
+                            'columnName' => 'salt',
+                        ],
+                        'createdAt' => [
+                            'fieldName' => 'createdAt',
+                            'type' => 'datetime',
+                            'columnName' => 'created_at',
+                            'options' => [
+                                'default' => 'CURRENT_TIMESTAMP',
+                            ],
+                            'nullable' => false,
+                        ],
+                        'updatedAt' => [
+                            'fieldName' => 'updatedAt',
+                            'type' => 'datetime',
+                            'columnName' => 'updated_at',
+                            'nullable' => true,
+                        ],
+                        'deletedAt' => [
+                            'fieldName' => 'deletedAt',
+                            'type' => 'datetime',
+                            'columnName' => 'deleted_at',
+                            'nullable' => true,
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                        'login' => 'login',
+                        'nome' => 'nome',
+                        'sobrenome' => 'sobrenome',
+                        'email' => 'email',
+                        'senha' => 'senha',
+                        'ativo' => 'ativo',
+                        'ultimo_acesso' => 'ultimoAcesso',
+                        'ip' => 'ip',
+                        'session_id' => 'sessionId',
+                        'algorithm' => 'algorithm',
+                        'admin' => 'admin',
+                        'salt' => 'salt',
+                        'created_at' => 'createdAt',
+                        'updated_at' => 'updatedAt',
+                        'deleted_at' => 'deletedAt',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                        'login' => 'login',
+                        'nome' => 'nome',
+                        'sobrenome' => 'sobrenome',
+                        'email' => 'email',
+                        'senha' => 'senha',
+                        'ativo' => 'ativo',
+                        'ultimoAcesso' => 'ultimo_acesso',
+                        'ip' => 'ip',
+                        'sessionId' => 'session_id',
+                        'algorithm' => 'algorithm',
+                        'admin' => 'admin',
+                        'salt' => 'salt',
+                        'createdAt' => 'created_at',
+                        'updatedAt' => 'updated_at',
+                        'deletedAt' => 'deleted_at',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'usuarios',
+                    ],
+                ],
+                'entityListeners' => [
+                    [
+                        'prePersist' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\UsuarioListener',
+                                'method' => 'prePersist',
+                            ],
+                        ],
+                        'preUpdate' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\UsuarioListener',
+                                'method' => 'preUpdate',
+                            ],
+                        ],
+                        'preRemove' => [
+                            [
+                                'class' => 'App\\Listener\\ORM\\UsuarioListener',
+                                'method' => 'preRemove',
+                            ],
+                        ],
+                    ],
+                ],
+                'associationMappings' => [
+                    [
+                        'lotacoes' => [
+                            'fieldName' => 'lotacoes',
+                            'targetEntity' => 'Novosga\\Entity\\Lotacao',
+                            'mappedBy' => 'usuario',
+                            'cascade' => [
+                                'remove',
+                                'persist',
+                                'refresh',
+                                'merge',
+                                'detach',
+                            ],
+                            'orphanRemoval' => true,
+                            'type' => 4,
+                            'inversedBy' => null,
+                            'isOwningSide' => false,
+                            'sourceEntity' => 'Novosga\\Entity\\Usuario',
+                            'fetch' => 2,
+                            'isCascadeRemove' => true,
+                            'isCascadePersist' => true,
+                            'isCascadeRefresh' => true,
+                            'isCascadeMerge' => true,
+                            'isCascadeDetach' => true,
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

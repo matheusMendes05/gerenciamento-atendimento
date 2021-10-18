@@ -1,0 +1,88 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+            clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+            clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+        ],
+        null,
+        [
+            'Doctrine\\ORM\\Query\\ParserResult' => [
+                '_sqlExecutor' => [
+                    $o[1],
+                ],
+                '_resultSetMapping' => [
+                    $o[2],
+                ],
+            ],
+            'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+                '_sqlStatements' => [
+                    1 => 'SELECT s0_.id AS id_0, s0_.nome AS nome_1, s0_.descricao AS descricao_2, s0_.ativo AS ativo_3, s0_.peso AS peso_4, s0_.created_at AS created_at_5, s0_.updated_at AS updated_at_6, s0_.deleted_at AS deleted_at_7, s0_.macro_id AS macro_id_8 FROM servicos s0_ WHERE s0_.deleted_at IS NULL AND s0_.macro_id IS NULL',
+                ],
+            ],
+            'stdClass' => [
+                'aliasMap' => [
+                    2 => [
+                        'e' => 'Novosga\\Entity\\Servico',
+                    ],
+                ],
+                'fieldMappings' => [
+                    2 => [
+                        'id_0' => 'id',
+                        'nome_1' => 'nome',
+                        'descricao_2' => 'descricao',
+                        'ativo_3' => 'ativo',
+                        'peso_4' => 'peso',
+                        'created_at_5' => 'createdAt',
+                        'updated_at_6' => 'updatedAt',
+                        'deleted_at_7' => 'deletedAt',
+                    ],
+                ],
+                'typeMappings' => [
+                    2 => [
+                        'macro_id_8' => 'integer',
+                    ],
+                ],
+                'entityMappings' => [
+                    2 => [
+                        'e' => null,
+                    ],
+                ],
+                'metaMappings' => [
+                    2 => [
+                        'macro_id_8' => 'macro_id',
+                    ],
+                ],
+                'columnOwnerMap' => [
+                    2 => [
+                        'id_0' => 'e',
+                        'nome_1' => 'e',
+                        'descricao_2' => 'e',
+                        'ativo_3' => 'e',
+                        'peso_4' => 'e',
+                        'created_at_5' => 'e',
+                        'updated_at_6' => 'e',
+                        'deleted_at_7' => 'e',
+                        'macro_id_8' => 'e',
+                    ],
+                ],
+                'declaringClasses' => [
+                    2 => [
+                        'id_0' => 'Novosga\\Entity\\Servico',
+                        'nome_1' => 'Novosga\\Entity\\Servico',
+                        'descricao_2' => 'Novosga\\Entity\\Servico',
+                        'ativo_3' => 'Novosga\\Entity\\Servico',
+                        'peso_4' => 'Novosga\\Entity\\Servico',
+                        'created_at_5' => 'Novosga\\Entity\\Servico',
+                        'updated_at_6' => 'Novosga\\Entity\\Servico',
+                        'deleted_at_7' => 'Novosga\\Entity\\Servico',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

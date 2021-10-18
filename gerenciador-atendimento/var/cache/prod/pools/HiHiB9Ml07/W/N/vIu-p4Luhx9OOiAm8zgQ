@@ -1,0 +1,124 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\AssignedGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\AssignedGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Painel',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Painel',
+                ],
+                'identifier' => [
+                    [
+                        'host',
+                    ],
+                ],
+                'fieldMappings' => [
+                    [
+                        'host' => [
+                            'id' => true,
+                            'fieldName' => 'host',
+                            'type' => 'integer',
+                            'columnName' => 'host',
+                        ],
+                        'senha' => [
+                            'fieldName' => 'senha',
+                            'type' => 'string',
+                            'length' => 128,
+                            'precision' => 0,
+                            'scale' => 0,
+                            'unique' => false,
+                            'nullable' => true,
+                            'columnName' => 'senha',
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'host' => 'host',
+                        'senha' => 'senha',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'host' => 'host',
+                        'senha' => 'senha',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'paineis',
+                    ],
+                ],
+                'associationMappings' => [
+                    [
+                        'servicos' => [
+                            'fieldName' => 'servicos',
+                            'targetEntity' => 'Novosga\\Entity\\PainelServico',
+                            'mappedBy' => 'painel',
+                            'fetch' => 2,
+                            'cascade' => [],
+                            'orphanRemoval' => false,
+                            'type' => 4,
+                            'inversedBy' => null,
+                            'isOwningSide' => false,
+                            'sourceEntity' => 'Novosga\\Entity\\Painel',
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                        ],
+                        'unidade' => [
+                            'fieldName' => 'unidade',
+                            'targetEntity' => 'Novosga\\Entity\\Unidade',
+                            'fetch' => 2,
+                            'joinColumns' => [
+                                [
+                                    'referencedColumnName' => 'id',
+                                    'name' => 'unidade_id',
+                                ],
+                            ],
+                            'cascade' => [],
+                            'type' => 2,
+                            'mappedBy' => null,
+                            'inversedBy' => null,
+                            'isOwningSide' => true,
+                            'sourceEntity' => 'Novosga\\Entity\\Painel',
+                            'isCascadeRemove' => false,
+                            'isCascadePersist' => false,
+                            'isCascadeRefresh' => false,
+                            'isCascadeMerge' => false,
+                            'isCascadeDetach' => false,
+                            'sourceToTargetKeyColumns' => [
+                                'unidade_id' => 'id',
+                            ],
+                            'joinColumnFieldNames' => [
+                                'unidade_id' => 'unidade_id',
+                            ],
+                            'targetToSourceKeyColumns' => [
+                                'id' => 'unidade_id',
+                            ],
+                            'orphanRemoval' => false,
+                        ],
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

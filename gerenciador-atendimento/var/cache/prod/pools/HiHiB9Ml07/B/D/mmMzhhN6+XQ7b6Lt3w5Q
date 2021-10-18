@@ -1,0 +1,66 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\AssignedGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\AssignedGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'Novosga\\Entity\\Senha',
+                ],
+                'namespace' => [
+                    'Novosga\\Entity',
+                ],
+                'rootEntityName' => [
+                    'Novosga\\Entity\\Senha',
+                ],
+                'isEmbeddedClass' => [
+                    true,
+                ],
+                'fieldMappings' => [
+                    [
+                        'sigla' => [
+                            'fieldName' => 'sigla',
+                            'type' => 'string',
+                            'columnName' => 'sigla',
+                            'length' => 3,
+                            'nullable' => false,
+                        ],
+                        'numero' => [
+                            'fieldName' => 'numero',
+                            'type' => 'integer',
+                            'columnName' => 'numero',
+                            'nullable' => false,
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'sigla' => 'sigla',
+                        'numero' => 'numero',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'sigla' => 'sigla',
+                        'numero' => 'numero',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'senha',
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

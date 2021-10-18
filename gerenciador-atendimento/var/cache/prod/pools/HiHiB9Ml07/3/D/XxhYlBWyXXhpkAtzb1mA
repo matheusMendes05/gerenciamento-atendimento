@@ -1,0 +1,116 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+            clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+            clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+        ],
+        null,
+        [
+            'Doctrine\\ORM\\Query\\ParserResult' => [
+                '_sqlExecutor' => [
+                    $o[1],
+                ],
+                '_resultSetMapping' => [
+                    $o[2],
+                ],
+                '_parameterMappings' => [
+                    [
+                        'unidade' => [
+                            0,
+                            2,
+                        ],
+                        'usuario' => [
+                            1,
+                        ],
+                    ],
+                ],
+            ],
+            'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+                '_sqlStatements' => [
+                    1 => 'SELECT s0_.sigla AS sigla_0, s0_.ativo AS ativo_1, s0_.peso AS peso_2, s0_.prioridade AS prioridade_3, s0_.numero_inicial AS numero_inicial_4, s0_.numero_final AS numero_final_5, s0_.incremento AS incremento_6, s0_.mensagem AS mensagem_7, s0_.servico_id AS servico_id_8, s0_.unidade_id AS unidade_id_9, s0_.local_id AS local_id_10, s0_.departamento_id AS departamento_id_11 FROM servicos_unidades s0_ INNER JOIN servicos s1_ ON s0_.servico_id = s1_.id WHERE s1_.deleted_at IS NULL AND s0_.ativo = 1 AND s0_.unidade_id = ? AND s1_.id NOT IN (SELECT s2_.id FROM servicos_usuarios s3_ INNER JOIN servicos s2_ ON s3_.servico_id = s2_.id WHERE s3_.usuario_id = ? AND s3_.unidade_id = ?)',
+                ],
+            ],
+            'stdClass' => [
+                'aliasMap' => [
+                    2 => [
+                        'e' => 'Novosga\\Entity\\ServicoUnidade',
+                    ],
+                ],
+                'fieldMappings' => [
+                    2 => [
+                        'sigla_0' => 'sigla',
+                        'ativo_1' => 'ativo',
+                        'peso_2' => 'peso',
+                        'prioridade_3' => 'prioridade',
+                        'numero_inicial_4' => 'numeroInicial',
+                        'numero_final_5' => 'numeroFinal',
+                        'incremento_6' => 'incremento',
+                        'mensagem_7' => 'mensagem',
+                    ],
+                ],
+                'typeMappings' => [
+                    2 => [
+                        'servico_id_8' => 'integer',
+                        'unidade_id_9' => 'integer',
+                        'local_id_10' => 'integer',
+                        'departamento_id_11' => 'integer',
+                    ],
+                ],
+                'entityMappings' => [
+                    2 => [
+                        'e' => null,
+                    ],
+                ],
+                'metaMappings' => [
+                    2 => [
+                        'servico_id_8' => 'servico_id',
+                        'unidade_id_9' => 'unidade_id',
+                        'local_id_10' => 'local_id',
+                        'departamento_id_11' => 'departamento_id',
+                    ],
+                ],
+                'columnOwnerMap' => [
+                    2 => [
+                        'sigla_0' => 'e',
+                        'ativo_1' => 'e',
+                        'peso_2' => 'e',
+                        'prioridade_3' => 'e',
+                        'numero_inicial_4' => 'e',
+                        'numero_final_5' => 'e',
+                        'incremento_6' => 'e',
+                        'mensagem_7' => 'e',
+                        'servico_id_8' => 'e',
+                        'unidade_id_9' => 'e',
+                        'local_id_10' => 'e',
+                        'departamento_id_11' => 'e',
+                    ],
+                ],
+                'declaringClasses' => [
+                    2 => [
+                        'sigla_0' => 'Novosga\\Entity\\ServicoUnidade',
+                        'ativo_1' => 'Novosga\\Entity\\ServicoUnidade',
+                        'peso_2' => 'Novosga\\Entity\\ServicoUnidade',
+                        'prioridade_3' => 'Novosga\\Entity\\ServicoUnidade',
+                        'numero_inicial_4' => 'Novosga\\Entity\\ServicoUnidade',
+                        'numero_final_5' => 'Novosga\\Entity\\ServicoUnidade',
+                        'incremento_6' => 'Novosga\\Entity\\ServicoUnidade',
+                        'mensagem_7' => 'Novosga\\Entity\\ServicoUnidade',
+                    ],
+                ],
+                'isIdentifierColumn' => [
+                    2 => [
+                        'e' => [
+                            'servico_id_8' => true,
+                            'unidade_id_9' => true,
+                        ],
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

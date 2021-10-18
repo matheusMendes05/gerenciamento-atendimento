@@ -1,0 +1,95 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+            clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+            clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+        ],
+        null,
+        [
+            'Doctrine\\ORM\\Query\\ParserResult' => [
+                '_sqlExecutor' => [
+                    $o[1],
+                ],
+                '_resultSetMapping' => [
+                    $o[2],
+                ],
+            ],
+            'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+                '_sqlStatements' => [
+                    1 => 'SELECT u0_.id AS id_0, u0_.nome AS nome_1, u0_.descricao AS descricao_2, u0_.ativo AS ativo_3, u0_.created_at AS created_at_4, u0_.updated_at AS updated_at_5, u0_.deleted_at AS deleted_at_6, u0_.impressao_cabecalho AS impressao_cabecalho_7, u0_.impressao_rodape AS impressao_rodape_8, u0_.impressao_exibir_data AS impressao_exibir_data_9, u0_.impressao_exibir_prioridade AS impressao_exibir_prioridade_10, u0_.impressao_exibir_nome_unidade AS impressao_exibir_nome_unidade_11, u0_.impressao_exibir_nome_servico AS impressao_exibir_nome_servico_12, u0_.impressao_exibir_mensagem_servico AS impressao_exibir_mensagem_servico_13 FROM unidades u0_ WHERE u0_.deleted_at IS NULL',
+                ],
+            ],
+            'stdClass' => [
+                'aliasMap' => [
+                    2 => [
+                        'e' => 'Novosga\\Entity\\Unidade',
+                    ],
+                ],
+                'fieldMappings' => [
+                    2 => [
+                        'id_0' => 'id',
+                        'nome_1' => 'nome',
+                        'descricao_2' => 'descricao',
+                        'ativo_3' => 'ativo',
+                        'created_at_4' => 'createdAt',
+                        'updated_at_5' => 'updatedAt',
+                        'deleted_at_6' => 'deletedAt',
+                        'impressao_cabecalho_7' => 'impressao.cabecalho',
+                        'impressao_rodape_8' => 'impressao.rodape',
+                        'impressao_exibir_data_9' => 'impressao.exibirData',
+                        'impressao_exibir_prioridade_10' => 'impressao.exibirPrioridade',
+                        'impressao_exibir_nome_unidade_11' => 'impressao.exibirNomeUnidade',
+                        'impressao_exibir_nome_servico_12' => 'impressao.exibirNomeServico',
+                        'impressao_exibir_mensagem_servico_13' => 'impressao.exibirMensagemServico',
+                    ],
+                ],
+                'entityMappings' => [
+                    2 => [
+                        'e' => null,
+                    ],
+                ],
+                'columnOwnerMap' => [
+                    2 => [
+                        'id_0' => 'e',
+                        'nome_1' => 'e',
+                        'descricao_2' => 'e',
+                        'ativo_3' => 'e',
+                        'created_at_4' => 'e',
+                        'updated_at_5' => 'e',
+                        'deleted_at_6' => 'e',
+                        'impressao_cabecalho_7' => 'e',
+                        'impressao_rodape_8' => 'e',
+                        'impressao_exibir_data_9' => 'e',
+                        'impressao_exibir_prioridade_10' => 'e',
+                        'impressao_exibir_nome_unidade_11' => 'e',
+                        'impressao_exibir_nome_servico_12' => 'e',
+                        'impressao_exibir_mensagem_servico_13' => 'e',
+                    ],
+                ],
+                'declaringClasses' => [
+                    2 => [
+                        'id_0' => 'Novosga\\Entity\\Unidade',
+                        'nome_1' => 'Novosga\\Entity\\Unidade',
+                        'descricao_2' => 'Novosga\\Entity\\Unidade',
+                        'ativo_3' => 'Novosga\\Entity\\Unidade',
+                        'created_at_4' => 'Novosga\\Entity\\Unidade',
+                        'updated_at_5' => 'Novosga\\Entity\\Unidade',
+                        'deleted_at_6' => 'Novosga\\Entity\\Unidade',
+                        'impressao_cabecalho_7' => 'Novosga\\Entity\\Unidade',
+                        'impressao_rodape_8' => 'Novosga\\Entity\\Unidade',
+                        'impressao_exibir_data_9' => 'Novosga\\Entity\\Unidade',
+                        'impressao_exibir_prioridade_10' => 'Novosga\\Entity\\Unidade',
+                        'impressao_exibir_nome_unidade_11' => 'Novosga\\Entity\\Unidade',
+                        'impressao_exibir_nome_servico_12' => 'Novosga\\Entity\\Unidade',
+                        'impressao_exibir_mensagem_servico_13' => 'Novosga\\Entity\\Unidade',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

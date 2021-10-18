@@ -1,0 +1,101 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+            clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+            clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+        ],
+        null,
+        [
+            'Doctrine\\ORM\\Query\\ParserResult' => [
+                '_sqlExecutor' => [
+                    $o[1],
+                ],
+                '_resultSetMapping' => [
+                    $o[2],
+                ],
+            ],
+            'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+                '_sqlStatements' => [
+                    1 => 'SELECT COUNT(*) AS dctrn_count FROM (SELECT DISTINCT id_0 FROM (SELECT u0_.id AS id_0, u0_.login AS login_1, u0_.nome AS nome_2, u0_.sobrenome AS sobrenome_3, u0_.email AS email_4, u0_.senha AS senha_5, u0_.ativo AS ativo_6, u0_.ultimo_acesso AS ultimo_acesso_7, u0_.ip AS ip_8, u0_.session_id AS session_id_9, u0_.algorithm AS algorithm_10, u0_.admin AS admin_11, u0_.salt AS salt_12, u0_.created_at AS created_at_13, u0_.updated_at AS updated_at_14, u0_.deleted_at AS deleted_at_15 FROM usuarios u0_) dctrn_result) dctrn_table',
+                ],
+            ],
+            'stdClass' => [
+                'aliasMap' => [
+                    2 => [
+                        'e' => 'Novosga\\Entity\\Usuario',
+                    ],
+                ],
+                'fieldMappings' => [
+                    2 => [
+                        'id_0' => 'id',
+                        'login_1' => 'login',
+                        'nome_2' => 'nome',
+                        'sobrenome_3' => 'sobrenome',
+                        'email_4' => 'email',
+                        'senha_5' => 'senha',
+                        'ativo_6' => 'ativo',
+                        'ultimo_acesso_7' => 'ultimoAcesso',
+                        'ip_8' => 'ip',
+                        'session_id_9' => 'sessionId',
+                        'algorithm_10' => 'algorithm',
+                        'admin_11' => 'admin',
+                        'salt_12' => 'salt',
+                        'created_at_13' => 'createdAt',
+                        'updated_at_14' => 'updatedAt',
+                        'deleted_at_15' => 'deletedAt',
+                    ],
+                ],
+                'entityMappings' => [
+                    2 => [
+                        'e' => null,
+                    ],
+                ],
+                'columnOwnerMap' => [
+                    2 => [
+                        'id_0' => 'e',
+                        'login_1' => 'e',
+                        'nome_2' => 'e',
+                        'sobrenome_3' => 'e',
+                        'email_4' => 'e',
+                        'senha_5' => 'e',
+                        'ativo_6' => 'e',
+                        'ultimo_acesso_7' => 'e',
+                        'ip_8' => 'e',
+                        'session_id_9' => 'e',
+                        'algorithm_10' => 'e',
+                        'admin_11' => 'e',
+                        'salt_12' => 'e',
+                        'created_at_13' => 'e',
+                        'updated_at_14' => 'e',
+                        'deleted_at_15' => 'e',
+                    ],
+                ],
+                'declaringClasses' => [
+                    2 => [
+                        'id_0' => 'Novosga\\Entity\\Usuario',
+                        'login_1' => 'Novosga\\Entity\\Usuario',
+                        'nome_2' => 'Novosga\\Entity\\Usuario',
+                        'sobrenome_3' => 'Novosga\\Entity\\Usuario',
+                        'email_4' => 'Novosga\\Entity\\Usuario',
+                        'senha_5' => 'Novosga\\Entity\\Usuario',
+                        'ativo_6' => 'Novosga\\Entity\\Usuario',
+                        'ultimo_acesso_7' => 'Novosga\\Entity\\Usuario',
+                        'ip_8' => 'Novosga\\Entity\\Usuario',
+                        'session_id_9' => 'Novosga\\Entity\\Usuario',
+                        'algorithm_10' => 'Novosga\\Entity\\Usuario',
+                        'admin_11' => 'Novosga\\Entity\\Usuario',
+                        'salt_12' => 'Novosga\\Entity\\Usuario',
+                        'created_at_13' => 'Novosga\\Entity\\Usuario',
+                        'updated_at_14' => 'Novosga\\Entity\\Usuario',
+                        'deleted_at_15' => 'Novosga\\Entity\\Usuario',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});

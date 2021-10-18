@@ -1,0 +1,92 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+            clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+            clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+        ],
+        null,
+        [
+            'Doctrine\\ORM\\Query\\ParserResult' => [
+                '_sqlExecutor' => [
+                    $o[1],
+                ],
+                '_resultSetMapping' => [
+                    $o[2],
+                ],
+                '_parameterMappings' => [
+                    [
+                        'usuario' => [
+                            0,
+                        ],
+                        'unidade' => [
+                            1,
+                        ],
+                    ],
+                ],
+            ],
+            'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+                '_sqlStatements' => [
+                    1 => 'SELECT s0_.peso AS peso_0, s0_.servico_id AS servico_id_1, s0_.unidade_id AS unidade_id_2, s0_.usuario_id AS usuario_id_3 FROM servicos_usuarios s0_ INNER JOIN servicos s1_ ON s0_.servico_id = s1_.id WHERE s0_.usuario_id = ? AND s0_.unidade_id = ? AND s1_.ativo = 1 ORDER BY s1_.nome ASC',
+                ],
+            ],
+            'stdClass' => [
+                'aliasMap' => [
+                    2 => [
+                        'e' => 'Novosga\\Entity\\ServicoUsuario',
+                    ],
+                ],
+                'fieldMappings' => [
+                    2 => [
+                        'peso_0' => 'peso',
+                    ],
+                ],
+                'typeMappings' => [
+                    2 => [
+                        'servico_id_1' => 'integer',
+                        'unidade_id_2' => 'integer',
+                        'usuario_id_3' => 'integer',
+                    ],
+                ],
+                'entityMappings' => [
+                    2 => [
+                        'e' => null,
+                    ],
+                ],
+                'metaMappings' => [
+                    2 => [
+                        'servico_id_1' => 'servico_id',
+                        'unidade_id_2' => 'unidade_id',
+                        'usuario_id_3' => 'usuario_id',
+                    ],
+                ],
+                'columnOwnerMap' => [
+                    2 => [
+                        'peso_0' => 'e',
+                        'servico_id_1' => 'e',
+                        'unidade_id_2' => 'e',
+                        'usuario_id_3' => 'e',
+                    ],
+                ],
+                'declaringClasses' => [
+                    2 => [
+                        'peso_0' => 'Novosga\\Entity\\ServicoUsuario',
+                    ],
+                ],
+                'isIdentifierColumn' => [
+                    2 => [
+                        'e' => [
+                            'servico_id_1' => true,
+                            'unidade_id_2' => true,
+                            'usuario_id_3' => true,
+                        ],
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});
